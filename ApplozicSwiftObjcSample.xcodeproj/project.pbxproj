@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18498EAC265F795600F62B20 /* ApplozicWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18498EAB265F795500F62B20 /* ApplozicWrapper.swift */; };
 		18773E11265E65D300CA38C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18773E10265E65D300CA38C4 /* AppDelegate.m */; };
 		18773E14265E65D300CA38C4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18773E13265E65D300CA38C4 /* SceneDelegate.m */; };
 		18773E17265E65D300CA38C4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18773E16265E65D300CA38C4 /* ViewController.m */; };
@@ -14,9 +15,14 @@
 		18773E1C265E65D800CA38C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18773E1B265E65D800CA38C4 /* Assets.xcassets */; };
 		18773E1F265E65D800CA38C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18773E1D265E65D800CA38C4 /* LaunchScreen.storyboard */; };
 		18773E22265E65D800CA38C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18773E21265E65D800CA38C4 /* main.m */; };
+		18773E2B265E864600CA38C4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18773E2A265E864600CA38C4 /* LoginViewController.m */; };
+		18773E2E265E8A8F00CA38C4 /* ALChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18773E2D265E8A8F00CA38C4 /* ALChatManager.swift */; };
+		D9DD8F68B25269357DFC8B43 /* Pods_ApplozicSwiftObjcSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB311E966F0EF8796A03F42B /* Pods_ApplozicSwiftObjcSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18498EAB265F795500F62B20 /* ApplozicWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplozicWrapper.swift; sourceTree = "<group>"; };
+		18498EAE265F814A00F62B20 /* ApplozicSwiftObjcSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ApplozicSwiftObjcSample.entitlements; sourceTree = "<group>"; };
 		18773E0C265E65D300CA38C4 /* ApplozicSwiftObjcSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApplozicSwiftObjcSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18773E0F265E65D300CA38C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18773E10265E65D300CA38C4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +35,13 @@
 		18773E1E265E65D800CA38C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18773E20265E65D800CA38C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18773E21265E65D800CA38C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18773E29265E864600CA38C4 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		18773E2A265E864600CA38C4 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		18773E2C265E8A8E00CA38C4 /* ApplozicSwiftObjcSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApplozicSwiftObjcSample-Bridging-Header.h"; sourceTree = "<group>"; };
+		18773E2D265E8A8F00CA38C4 /* ALChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ALChatManager.swift; path = ../../../SwiftApplozic/ApplozicSwift/Demo/ApplozicSwiftDemo/ALChatManager.swift; sourceTree = "<group>"; };
+		77897A8F1808514A81AFAABD /* Pods-ApplozicSwiftObjcSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApplozicSwiftObjcSample.release.xcconfig"; path = "Target Support Files/Pods-ApplozicSwiftObjcSample/Pods-ApplozicSwiftObjcSample.release.xcconfig"; sourceTree = "<group>"; };
+		AB311E966F0EF8796A03F42B /* Pods_ApplozicSwiftObjcSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApplozicSwiftObjcSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB8C5D1B886FFA07F5882E1 /* Pods-ApplozicSwiftObjcSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApplozicSwiftObjcSample.debug.xcconfig"; path = "Target Support Files/Pods-ApplozicSwiftObjcSample/Pods-ApplozicSwiftObjcSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9DD8F68B25269357DFC8B43 /* Pods_ApplozicSwiftObjcSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +61,8 @@
 			children = (
 				18773E0E265E65D300CA38C4 /* ApplozicSwiftObjcSample */,
 				18773E0D265E65D300CA38C4 /* Products */,
+				77774B91E9279C301A57E831 /* Pods */,
+				8E105118C8DECAAC476AB2C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +77,8 @@
 		18773E0E265E65D300CA38C4 /* ApplozicSwiftObjcSample */ = {
 			isa = PBXGroup;
 			children = (
+				18498EAE265F814A00F62B20 /* ApplozicSwiftObjcSample.entitlements */,
+				18773E2D265E8A8F00CA38C4 /* ALChatManager.swift */,
 				18773E0F265E65D300CA38C4 /* AppDelegate.h */,
 				18773E10265E65D300CA38C4 /* AppDelegate.m */,
 				18773E12265E65D300CA38C4 /* SceneDelegate.h */,
@@ -72,8 +90,29 @@
 				18773E1D265E65D800CA38C4 /* LaunchScreen.storyboard */,
 				18773E20265E65D800CA38C4 /* Info.plist */,
 				18773E21265E65D800CA38C4 /* main.m */,
+				18773E29265E864600CA38C4 /* LoginViewController.h */,
+				18773E2A265E864600CA38C4 /* LoginViewController.m */,
+				18773E2C265E8A8E00CA38C4 /* ApplozicSwiftObjcSample-Bridging-Header.h */,
+				18498EAB265F795500F62B20 /* ApplozicWrapper.swift */,
 			);
 			path = ApplozicSwiftObjcSample;
+			sourceTree = "<group>";
+		};
+		77774B91E9279C301A57E831 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CBB8C5D1B886FFA07F5882E1 /* Pods-ApplozicSwiftObjcSample.debug.xcconfig */,
+				77897A8F1808514A81AFAABD /* Pods-ApplozicSwiftObjcSample.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8E105118C8DECAAC476AB2C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB311E966F0EF8796A03F42B /* Pods_ApplozicSwiftObjcSample.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18773E25265E65D800CA38C4 /* Build configuration list for PBXNativeTarget "ApplozicSwiftObjcSample" */;
 			buildPhases = (
+				71BE989BFDF0C8AF9FF09861 /* [CP] Check Pods Manifest.lock */,
 				18773E08265E65D300CA38C4 /* Sources */,
 				18773E09265E65D300CA38C4 /* Frameworks */,
 				18773E0A265E65D300CA38C4 /* Resources */,
+				AF22EED9A49D0B17E82BEC2B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -106,6 +147,7 @@
 				TargetAttributes = {
 					18773E0B265E65D300CA38C4 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -140,15 +182,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		71BE989BFDF0C8AF9FF09861 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ApplozicSwiftObjcSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF22EED9A49D0B17E82BEC2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApplozicSwiftObjcSample/Pods-ApplozicSwiftObjcSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ApplozicSwiftObjcSample/Pods-ApplozicSwiftObjcSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ApplozicSwiftObjcSample/Pods-ApplozicSwiftObjcSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18773E08265E65D300CA38C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18773E2E265E8A8F00CA38C4 /* ALChatManager.swift in Sources */,
 				18773E17265E65D300CA38C4 /* ViewController.m in Sources */,
 				18773E11265E65D300CA38C4 /* AppDelegate.m in Sources */,
+				18498EAC265F795600F62B20 /* ApplozicWrapper.swift in Sources */,
 				18773E22265E65D800CA38C4 /* main.m in Sources */,
 				18773E14265E65D300CA38C4 /* SceneDelegate.m in Sources */,
+				18773E2B265E864600CA38C4 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -278,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -288,34 +375,53 @@
 		};
 		18773E26265E65D800CA38C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBB8C5D1B886FFA07F5882E1 /* Pods-ApplozicSwiftObjcSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ApplozicSwiftObjcSample/ApplozicSwiftObjcSample.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = C25JNDCBM4;
 				INFOPLIST_FILE = ApplozicSwiftObjcSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.applozic.customer.ApplozicSwiftObjcSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.applozic.customer.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "global Customer Demo";
+				SWIFT_OBJC_BRIDGING_HEADER = "ApplozicSwiftObjcSample/ApplozicSwiftObjcSample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		18773E27265E65D800CA38C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77897A8F1808514A81AFAABD /* Pods-ApplozicSwiftObjcSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ApplozicSwiftObjcSample/ApplozicSwiftObjcSample.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = C25JNDCBM4;
 				INFOPLIST_FILE = ApplozicSwiftObjcSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.applozic.customer.ApplozicSwiftObjcSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.applozic.customer.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "global Customer Demo";
+				SWIFT_OBJC_BRIDGING_HEADER = "ApplozicSwiftObjcSample/ApplozicSwiftObjcSample-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

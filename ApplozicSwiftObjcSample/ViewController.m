@@ -15,8 +15,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.chatManager = [[ALChatManager alloc] initWithApplicationKey:@"applozic-sample-app"];
 }
 
+- (IBAction)launchConversations:(id)sender {
+    [self.chatManager launchChatListFrom:self];
+}
+
+- (IBAction)logout:(id)sender {
+    [self.chatManager logoutUserWithCompletion:^(BOOL sucess) {
+        [self dismissViewControllerAnimated:true completion:nil];
+    }];
+}
 
 @end
