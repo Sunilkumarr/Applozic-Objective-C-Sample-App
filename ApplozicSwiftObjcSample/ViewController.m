@@ -15,15 +15,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.chatManager = [[ALChatManager alloc] initWithApplicationKey:@"applozic-sample-app"];
 }
 
 - (IBAction)launchConversations:(id)sender {
-    [self.chatManager launchChatListFrom:self];
+    [ALChatManager.shared launchChatListFrom:self];
 }
 
 - (IBAction)logout:(id)sender {
-    [self.chatManager logoutUserWithCompletion:^(BOOL sucess) {
+    [ALChatManager.shared logoutUserWithCompletion:^(BOOL sucess) {
         [self dismissViewControllerAnimated:true completion:nil];
     }];
 }

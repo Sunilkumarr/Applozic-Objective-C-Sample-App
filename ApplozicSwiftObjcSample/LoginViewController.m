@@ -23,7 +23,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.chatManager = [[ALChatManager alloc] initWithApplicationKey:@"applozic-sample-app"];
     [self.activityIndicator setHidden:YES];
 }
 
@@ -57,7 +56,7 @@
     [ALUserDefaultsHandler setUserId:user.userId];
     [ALUserDefaultsHandler setPassword:user.password];
 
-    [self.chatManager connectUser:user completion:^(ALRegistrationResponse * response, NSError * error) {
+    [[ALChatManager shared] connectUser:user completion:^(ALRegistrationResponse * response, NSError * error) {
         [self.activityIndicator stopAnimating];
         [self.activityIndicator setHidden:YES];
         self.view.userInteractionEnabled = YES;

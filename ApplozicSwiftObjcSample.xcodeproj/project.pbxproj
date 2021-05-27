@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18498EAC265F795600F62B20 /* ApplozicWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18498EAB265F795500F62B20 /* ApplozicWrapper.swift */; };
+		184BD6EC265FEA3D000CD3C2 /* ALChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BD6EB265FEA3C000CD3C2 /* ALChatManager.swift */; };
 		18773E11265E65D300CA38C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18773E10265E65D300CA38C4 /* AppDelegate.m */; };
 		18773E14265E65D300CA38C4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18773E13265E65D300CA38C4 /* SceneDelegate.m */; };
 		18773E17265E65D300CA38C4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18773E16265E65D300CA38C4 /* ViewController.m */; };
@@ -16,13 +17,13 @@
 		18773E1F265E65D800CA38C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18773E1D265E65D800CA38C4 /* LaunchScreen.storyboard */; };
 		18773E22265E65D800CA38C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18773E21265E65D800CA38C4 /* main.m */; };
 		18773E2B265E864600CA38C4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18773E2A265E864600CA38C4 /* LoginViewController.m */; };
-		18773E2E265E8A8F00CA38C4 /* ALChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18773E2D265E8A8F00CA38C4 /* ALChatManager.swift */; };
 		D9DD8F68B25269357DFC8B43 /* Pods_ApplozicSwiftObjcSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB311E966F0EF8796A03F42B /* Pods_ApplozicSwiftObjcSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18498EAB265F795500F62B20 /* ApplozicWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplozicWrapper.swift; sourceTree = "<group>"; };
 		18498EAE265F814A00F62B20 /* ApplozicSwiftObjcSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ApplozicSwiftObjcSample.entitlements; sourceTree = "<group>"; };
+		184BD6EB265FEA3C000CD3C2 /* ALChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALChatManager.swift; sourceTree = "<group>"; };
 		18773E0C265E65D300CA38C4 /* ApplozicSwiftObjcSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApplozicSwiftObjcSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18773E0F265E65D300CA38C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18773E10265E65D300CA38C4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		18773E29265E864600CA38C4 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		18773E2A265E864600CA38C4 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		18773E2C265E8A8E00CA38C4 /* ApplozicSwiftObjcSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApplozicSwiftObjcSample-Bridging-Header.h"; sourceTree = "<group>"; };
-		18773E2D265E8A8F00CA38C4 /* ALChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ALChatManager.swift; path = ../../../SwiftApplozic/ApplozicSwift/Demo/ApplozicSwiftDemo/ALChatManager.swift; sourceTree = "<group>"; };
 		77897A8F1808514A81AFAABD /* Pods-ApplozicSwiftObjcSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApplozicSwiftObjcSample.release.xcconfig"; path = "Target Support Files/Pods-ApplozicSwiftObjcSample/Pods-ApplozicSwiftObjcSample.release.xcconfig"; sourceTree = "<group>"; };
 		AB311E966F0EF8796A03F42B /* Pods_ApplozicSwiftObjcSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApplozicSwiftObjcSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBB8C5D1B886FFA07F5882E1 /* Pods-ApplozicSwiftObjcSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApplozicSwiftObjcSample.debug.xcconfig"; path = "Target Support Files/Pods-ApplozicSwiftObjcSample/Pods-ApplozicSwiftObjcSample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,8 +77,8 @@
 		18773E0E265E65D300CA38C4 /* ApplozicSwiftObjcSample */ = {
 			isa = PBXGroup;
 			children = (
+				184BD6EB265FEA3C000CD3C2 /* ALChatManager.swift */,
 				18498EAE265F814A00F62B20 /* ApplozicSwiftObjcSample.entitlements */,
-				18773E2D265E8A8F00CA38C4 /* ALChatManager.swift */,
 				18773E0F265E65D300CA38C4 /* AppDelegate.h */,
 				18773E10265E65D300CA38C4 /* AppDelegate.m */,
 				18773E12265E65D300CA38C4 /* SceneDelegate.h */,
@@ -229,8 +229,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18773E2E265E8A8F00CA38C4 /* ALChatManager.swift in Sources */,
 				18773E17265E65D300CA38C4 /* ViewController.m in Sources */,
+				184BD6EC265FEA3D000CD3C2 /* ALChatManager.swift in Sources */,
 				18773E11265E65D300CA38C4 /* AppDelegate.m in Sources */,
 				18498EAC265F795600F62B20 /* ApplozicWrapper.swift in Sources */,
 				18773E22265E65D800CA38C4 /* main.m in Sources */,

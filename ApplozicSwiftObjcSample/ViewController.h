@@ -9,7 +9,6 @@
 #import "ApplozicSwiftObjcSample-Swift.h"
 
 @interface ViewController : UIViewController
-@property (strong, nonatomic) ALChatManager * chatManager;
 
 @end
 
