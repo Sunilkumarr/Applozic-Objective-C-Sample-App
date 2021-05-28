@@ -7,7 +7,8 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "ApplozicSwift-Swift.h"
+@import ApplozicSwift;
+@import ApplozicCore;
 #import <UserNotifications/UserNotifications.h>
 
 @interface AppDelegate () <UNUserNotificationCenterDelegate>

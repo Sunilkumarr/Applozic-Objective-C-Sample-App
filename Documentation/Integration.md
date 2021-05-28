@@ -98,6 +98,15 @@ The method file that we need here is `ALChatManager` files.
 <a name="register-login-user"></a>
 ### 2. Register/Login the User
 
+Login or register the user in applozic using below code.
+
+Add the import in your class for accessing
+
+```objective-c
+@import ApplozicSwift;
+@import ApplozicCore;
+```
+
 ```objective-c
 // Creating "ALUser" and Passing user details
 // Except UserId all the other parameters are optional

@@ -7,7 +7,8 @@
 
 #import "SceneDelegate.h"
 #import "ViewController.h"
-#import "ApplozicSwift-Swift.h"
+@import ApplozicSwift;
+@import ApplozicCore;
 
 @interface SceneDelegate ()
 

@@ -6,7 +6,8 @@
 //
 
 #import "LoginViewController.h"
-#import "ApplozicSwift-Swift.h"
+@import ApplozicSwift;
+@import ApplozicCore;
 #import "ViewController.h"
 
 @interface LoginViewController ()
