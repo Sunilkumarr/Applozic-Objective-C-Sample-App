@@ -1,4 +1,4 @@
-# Applozic Objective c sample app:
+# Applozic Objective c sample app
 
 ![Platform](https://img.shields.io/badge/Platform-ios-brightgreen.svg)
 ![Platform](https://img.shields.io/badge/Language-ObjectiveC-yellow.svg)
@@ -65,12 +65,14 @@ Before getting started with installation. We recommend to go through some basic 
 
 1. Clone the Sample project in your terminal using the below command 
 
- ```git clone https://github.com/AppLozic/Applozic-Objective-C-Sample-App.git```
-
+ ```bash
+ git clone https://github.com/AppLozic/Applozic-Objective-C-Sample-App.git
+ ```
 2. Navigate to the root folder of Applozic-Objective-C-Sample-App and use the below command 
 
-```pod install```
-
+```bash
+pod install
+```
 3. Now open the `ApplozicSwiftObjcSample.xcworkspace` file in the Xcode and run the sample project.
 
 <a name="integration-sdk"></a>
@@ -131,4 +133,4 @@ We provide support over at [StackOverflow](http://stackoverflow.com/questions/ta
 
 <a name="license"></a>
 ## License :heavy_check_mark:
-Licensed under the [BSD-3 Clause License](https://github.com/AppLozic/Applozic-Objective-C-Sample-App/blob/main/LICENSE).
+Licensed under the [BSD-3 Clause License](https://github.com/AppLozic/Applozic-Objective-C-Sample-App/blob/main/LICENSE.md).

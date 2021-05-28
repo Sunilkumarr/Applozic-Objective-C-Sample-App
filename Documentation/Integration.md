@@ -62,7 +62,7 @@ https://github.com/AppLozic/ApplozicSwift.git
 ```
 2. Once you click the Next button Select the ApplozicSwift package product and it will look like below and click finish
 
-   ![spm-applozic-swift](Images/spm-applozic-swift.png)
+   ![spm-applozic-swift](../Images/spm-applozic-swift.png)
 
 **Note** : Make sure you have linked your GitHub account from your Xcode to integrate Swift Package Manager of ApplozicSwift
 
@@ -130,12 +130,12 @@ For Apple to send these notifications, would have to create an APNs certificate 
 
 1. Visit this [link](https://developer.apple.com/account/resources/certificates/add), to create Apple Push Notification service SSL (Sandbox) i.e development certificate
 
-   ![apns-development-certificate](Images/apns-development-certificate.png)
+   ![apns-development-certificate](../Images/apns-development-certificate.png)
 
 
 2. Visit this [link](https://developer.apple.com/account/resources/certificates/add), to create Apple Push Notification service SSL (Sandbox & Production) i.e distribution certificate
 
-   ![apns-distribution-certificate](Images/apns-distribution.png)
+   ![apns-distribution-certificate](../Images/apns-distribution.png)
 
 
 Once the certificates are created you can download them and export the p12 files with password for development and distribution certificate either from Keychain Acess from Mac.  
@@ -146,7 +146,7 @@ Upload your push notification certificates (mentioned above) to the Applozic con
 
 Go to Applozic [console](https://console.applozic.com/settings/pushnotification) push notification section to upload the APNs development and distribution certificates
 
-   ![apns-certificate-upload](Images/apns-certificate-upload.png)
+   ![apns-certificate-upload](../Images/apns-certificate-upload.png)
 
 
 #### Adding Capabilities to Your App
@@ -162,7 +162,7 @@ Add capabilities to configure app services from Apple, such as push notification
  
 The following screenshot would be of help.
 
-![xcode-capability](Images/xcode-capability.png)
+![xcode-capability](../Images/xcode-capability.png)
  
 #### Configure the push notification in the Appdelegate file of your project.
 
