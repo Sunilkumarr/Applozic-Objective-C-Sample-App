@@ -92,8 +92,7 @@ In the Info.plist file of your project. Please add the following permissions
 The method file that we need here is `ALChatManager` files.
 
 1. Download the `ALChatManager.swift` [here](https://github.com/AppLozic/Applozic-Objective-C-Sample-App/blob/main/ApplozicSwiftObjcSample/ALChatManager.swift)  and add the downloaded `ALChatManager.swift` in your project add the bridging header if it asks.
-2. Open `ALChatManager.swift` file in your Xcode and Replace "applozic-sample-app" with your App ID from [here](https://console.applozic.com/settings/install)
-3. Download the `ApplozicWrapper.swift` for push notification setup you can download from [here](https://github.com/AppLozic/Applozic-Objective-C-Sample-App/blob/main/ApplozicSwiftObjcSample/ApplozicWrapper.swift) and add the downloaded `ApplozicWrapper.swift` in your project.
+2. Open `ALChatManager.swift` file in your Xcode and Replace "applozic-sample-app" with your App ID from [here](https://console.applozic.com/settings)
 
 <a name="register-login-user"></a>
 ### 2. Register/Login the User
@@ -196,13 +195,13 @@ Add the below code in AppDelegate.m file If some of the methods exits then copy-
 
     // Push notification delegate setup
     UNUserNotificationCenter.currentNotificationCenter.delegate = self;
-    return [ApplozicWrapper.shared application:application didFinishLaunchingWithOptions:launchOptions];
+    return [ALChatManager.shared application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
 
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler {
 
-    [ApplozicWrapper.shared application:application didReceiveRemoteNotification:userInfo fetchCompletionHandler:^(UIBackgroundFetchResult backgroundFetchResult) {
+    [ALChatManager.shared application:application didReceiveRemoteNotification:userInfo fetchCompletionHandler:^(UIBackgroundFetchResult backgroundFetchResult) {
         // Perform your other operations here
         completionHandler(backgroundFetchResult);
     }];
@@ -210,30 +209,30 @@ Add the below code in AppDelegate.m file If some of the methods exits then copy-
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification*)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
 
-    [ApplozicWrapper.shared userNotificationCenter:center willPresent:notification withCompletionHandler:^(UNNotificationPresentationOptions options) {
+    [ALChatManager.shared userNotificationCenter:center willPresent:notification withCompletionHandler:^(UNNotificationPresentationOptions options) {
         completionHandler(options);
     }];
 }
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(nonnull UNNotificationResponse* )response withCompletionHandler:(nonnull void (^)(void))completionHandler {
 
-    [ApplozicWrapper.shared userNotificationCenter:center didReceive:response withCompletionHandler:^{
+    [ALChatManager.shared userNotificationCenter:center didReceive:response withCompletionHandler:^{
         completionHandler();
     }];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-    [ApplozicWrapper.shared applicationWillEnterForeground:application];
+    [ALChatManager.shared applicationWillEnterForeground:application];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    [ApplozicWrapper.shared applicationWillTerminateWithApplication:application];
+    [ALChatManager.shared applicationWillTerminateWithApplication:application];
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    [ApplozicWrapper.shared application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+    [ALChatManager.shared application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
 }
 
 @end

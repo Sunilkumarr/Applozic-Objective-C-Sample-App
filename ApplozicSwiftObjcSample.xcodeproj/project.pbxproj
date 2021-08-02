@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18498EAC265F795600F62B20 /* ApplozicWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18498EAB265F795500F62B20 /* ApplozicWrapper.swift */; };
 		184BD6EC265FEA3D000CD3C2 /* ALChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184BD6EB265FEA3C000CD3C2 /* ALChatManager.swift */; };
 		18773E11265E65D300CA38C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18773E10265E65D300CA38C4 /* AppDelegate.m */; };
 		18773E14265E65D300CA38C4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18773E13265E65D300CA38C4 /* SceneDelegate.m */; };
@@ -21,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		18498EAB265F795500F62B20 /* ApplozicWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplozicWrapper.swift; sourceTree = "<group>"; };
 		18498EAE265F814A00F62B20 /* ApplozicSwiftObjcSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ApplozicSwiftObjcSample.entitlements; sourceTree = "<group>"; };
 		184BD6EB265FEA3C000CD3C2 /* ALChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALChatManager.swift; sourceTree = "<group>"; };
 		18773E0C265E65D300CA38C4 /* ApplozicSwiftObjcSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApplozicSwiftObjcSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +91,6 @@
 				18773E29265E864600CA38C4 /* LoginViewController.h */,
 				18773E2A265E864600CA38C4 /* LoginViewController.m */,
 				18773E2C265E8A8E00CA38C4 /* ApplozicSwiftObjcSample-Bridging-Header.h */,
-				18498EAB265F795500F62B20 /* ApplozicWrapper.swift */,
 			);
 			path = ApplozicSwiftObjcSample;
 			sourceTree = "<group>";
@@ -232,7 +229,6 @@
 				18773E17265E65D300CA38C4 /* ViewController.m in Sources */,
 				184BD6EC265FEA3D000CD3C2 /* ALChatManager.swift in Sources */,
 				18773E11265E65D300CA38C4 /* AppDelegate.m in Sources */,
-				18498EAC265F795600F62B20 /* ApplozicWrapper.swift in Sources */,
 				18773E22265E65D800CA38C4 /* main.m in Sources */,
 				18773E14265E65D300CA38C4 /* SceneDelegate.m in Sources */,
 				18773E2B265E864600CA38C4 /* LoginViewController.m in Sources */,

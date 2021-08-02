@@ -1,23 +1,21 @@
 PODS:
   - ApplozicCore (8.1.0)
-  - ApplozicSwift (6.0.0):
-    - ApplozicSwift/Complete (= 6.0.0)
-  - ApplozicSwift/Complete (6.0.0):
+  - ApplozicSwift (6.1.2):
+    - ApplozicSwift/Complete (= 6.1.2)
+  - ApplozicSwift/Complete (6.1.2):
     - ApplozicCore (~> 8.1.0)
     - ApplozicSwift/RichMessageKit
-    - Kingfisher (~> 5.14.0)
+    - Kingfisher (~> 6.3.0)
     - SwipeCellKit (~> 2.7.1)
-  - ApplozicSwift/RichMessageKit (6.0.0)
-  - Kingfisher (5.14.1):
-    - Kingfisher/Core (= 5.14.1)
-  - Kingfisher/Core (5.14.1)
+  - ApplozicSwift/RichMessageKit (6.1.2)
+  - Kingfisher (6.3.0)
   - SwipeCellKit (2.7.1)
 
 DEPENDENCIES:
   - ApplozicSwift
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - ApplozicCore
     - ApplozicSwift
     - Kingfisher
@@ -25,8 +23,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   ApplozicCore: db1ccbf9e98788a7a32550486831b13019f29dad
-  ApplozicSwift: cd0f2f23df075d0ea2f48806e33394cf4b17c121
-  Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
+  ApplozicSwift: 848354f5392d77af96ecd4c6b9a311a6e4e94c32
+  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
   SwipeCellKit: 3972254a826da74609926daf59b08d6c72e619ea
 
 PODFILE CHECKSUM: ddbad2798dedcf65f30bc7ef25229e94006705d1

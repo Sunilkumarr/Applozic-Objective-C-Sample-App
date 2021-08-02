@@ -9,6 +9,7 @@
 #import "ViewController.h"
 @import ApplozicSwift;
 @import ApplozicCore;
+#import "ApplozicSwiftObjcSample-Swift.h"
 #import <UserNotifications/UserNotifications.h>
 
 @interface AppDelegate () <UNUserNotificationCenterDelegate>
@@ -34,7 +35,7 @@
 
     UNUserNotificationCenter.currentNotificationCenter.delegate = self;
 
-    return [ApplozicWrapper.shared application:application didFinishLaunchingWithOptions:launchOptions];
+    return [ALChatManager.shared application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
 
@@ -58,7 +59,7 @@
 
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler {
 
-    [ApplozicWrapper.shared application:application didReceiveRemoteNotification:userInfo fetchCompletionHandler:^(UIBackgroundFetchResult backgroundFetchResult) {
+    [ALChatManager.shared application:application didReceiveRemoteNotification:userInfo fetchCompletionHandler:^(UIBackgroundFetchResult backgroundFetchResult) {
 
         // Perform your other operations here
 
@@ -68,14 +69,14 @@
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification*)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
 
-    [ApplozicWrapper.shared userNotificationCenter:center willPresent:notification withCompletionHandler:^(UNNotificationPresentationOptions options) {
+    [ALChatManager.shared userNotificationCenter:center willPresent:notification withCompletionHandler:^(UNNotificationPresentationOptions options) {
         completionHandler(options);
     }];
 }
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(nonnull UNNotificationResponse* )response withCompletionHandler:(nonnull void (^)(void))completionHandler {
 
-    [ApplozicWrapper.shared userNotificationCenter:center didReceive:response withCompletionHandler:^{
+    [ALChatManager.shared userNotificationCenter:center didReceive:response withCompletionHandler:^{
         completionHandler();
     }];
 }
@@ -87,7 +88,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-    [ApplozicWrapper.shared applicationWillEnterForeground:application];
+    [ALChatManager.shared applicationWillEnterForeground:application];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -96,12 +97,12 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    [ApplozicWrapper.shared applicationWillTerminateWithApplication:application];
+    [ALChatManager.shared applicationWillTerminateWithApplication:application];
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 
-    [ApplozicWrapper.shared application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+    [ALChatManager.shared application:application didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
 }
 
 @end
