@@ -34,8 +34,8 @@
     }
 
     UNUserNotificationCenter.currentNotificationCenter.delegate = self;
-
-    return [ALChatManager.shared application:application didFinishLaunchingWithOptions:launchOptions];
+    [ALChatManager.shared application:application didFinishLaunchingWithOptions:launchOptions];
+    return YES;
 }
 
 
@@ -60,9 +60,7 @@
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler {
 
     [ALChatManager.shared application:application didReceiveRemoteNotification:userInfo fetchCompletionHandler:^(UIBackgroundFetchResult backgroundFetchResult) {
-
         // Perform your other operations here
-
         completionHandler(backgroundFetchResult);
     }];
 }

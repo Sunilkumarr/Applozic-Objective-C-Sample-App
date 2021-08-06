@@ -14,13 +14,13 @@ import UIKit
     /// Set your appId here in place of applozic-sample-app
     static let applicationId = "applozic-sample-app"
     @objc static let shared = ALChatManager(applicationKey: ALChatManager.applicationId as NSString)
-    
+
     @objc var pushNotificationTokenData: Data? {
         didSet {
             updateToken()
         }
     }
-    
+
     @objc init(applicationKey: NSString) {
         super.init()
         if applicationKey.length == 0 {
@@ -29,7 +29,7 @@ import UIKit
         ALUserDefaultsHandler.setApplicationKey(applicationKey as String)
         defaultChatViewSettings()
     }
-    
+
     class func isNilOrEmpty(_ string: NSString?) -> Bool {
         switch string {
         case let .some(nonNilString):
@@ -38,17 +38,17 @@ import UIKit
             return true
         }
     }
-    
+
     @objc func updateToken() {
         guard let deviceToken = pushNotificationTokenData else { return }
         print("DEVICE_TOKEN_DATA :: \(deviceToken.description)") // (SWIFT = 3) : TOKEN PARSING
-        
+
         var deviceTokenString: String = ""
         for i in 0 ..< deviceToken.count {
             deviceTokenString += String(format: "%02.2hhx", deviceToken[i] as CVarArg)
         }
         print("DEVICE_TOKEN_STRING :: \(deviceTokenString)")
-        
+
         if ALUserDefaultsHandler.getApnDeviceToken() != deviceTokenString {
             let alRegisterUserClientService = ALRegisterUserClientService()
             alRegisterUserClientService.updateApnDeviceToken(withCompletion: deviceTokenString, withCompletion: { response, _ in
@@ -56,7 +56,7 @@ import UIKit
             })
         }
     }
-    
+
     /// This method used for Authentication OR User Registration to applozic server
     /// It create a new user in applozic if user doesn't exist OR it will login to the existing user.
     /// - Parameters:
@@ -85,13 +85,13 @@ import UIKit
             completion(response, nil)
         })
     }
-    
+
     func getApplicationKey() -> NSString {
         let appKey = ALUserDefaultsHandler.getApplicationKey() as NSString?
         let applicationKey = (appKey != nil) ? appKey : ALChatManager.applicationId as NSString?
         return applicationKey!
     }
-    
+
     func isUserPresent() -> Bool {
         guard let _ = ALUserDefaultsHandler.getApplicationKey() as String?,
               let _ = ALUserDefaultsHandler.getUserId() as String?
@@ -100,7 +100,7 @@ import UIKit
         }
         return true
     }
-    
+
     @objc func logoutUser(completion: @escaping (Bool) -> Void) {
         let registerUserClientService = ALRegisterUserClientService()
         if let _ = ALUserDefaultsHandler.getDeviceKeyString() {
@@ -113,7 +113,7 @@ import UIKit
             })
         }
     }
-    
+
     /// Add the default chat settings here
     func defaultChatViewSettings() {
         ALUserDefaultsHandler.setGoogleMapAPIKey("AIzaSyCOacEeJi-ZWLLrOtYyj3PKMTOFEG7HDlw") // REPLACE WITH YOUR GOOGLE MAPKEY
@@ -122,8 +122,8 @@ import UIKit
         ALUserDefaultsHandler.setDebugLogsRequire(true)
         ALApplozicSettings.setSwiftFramework(true)
     }
-    
-    
+
+
     /// Use this method for launching conversation list screen.
     /// - Parameter viewController: Pass the UIViewController.
     @objc func launchChatList(from viewController: UIViewController) {
@@ -132,7 +132,7 @@ import UIKit
         navVC.modalPresentationStyle = .fullScreen
         viewController.present(navVC, animated: true, completion: nil)
     }
-    
+
     /// Use this method for launching 1-to-1 chat conversation.
     /// - Parameters:
     ///   - contactId: Pass userId of whom for conversation needs to be launched.
@@ -150,8 +150,8 @@ import UIKit
         conversationViewController.viewModel = convViewModel
         launch(viewController: conversationViewController, from: viewController)
     }
-    
-    
+
+
     /// Use this method to launch the group chat conversation.
     /// - Parameters:
     ///   - clientGroupId: Pass the clientGroupId for launching Group/Channel conversation.
@@ -167,7 +167,7 @@ import UIKit
             self.launch(viewController: conversationViewController, from: viewController)
         }
     }
-    
+
     /// Use [launchGroupOfTwo](x-source-tag://GroupOfTwo) method instead.
     @objc func launchChatWith(conversationProxy: ALConversationProxy, from viewController: UIViewController) {
         let userId = conversationProxy.userId
@@ -177,7 +177,7 @@ import UIKit
         conversationViewController.viewModel = convViewModel
         launch(viewController: conversationViewController, from: viewController)
     }
-    
+
     /// Use [launchGroupOfTwo](x-source-tag://GroupOfTwo) method instead.
     func createAndLaunchChatWith(conversationProxy: ALConversationProxy, from viewController: UIViewController, configuration: ALKConfiguration) {
         let conversationService = ALConversationService()
@@ -190,7 +190,7 @@ import UIKit
             self.launchChatWith(conversationProxy: alConversationProxy, from: viewController)
         }
     }
-    
+
     /// Use this to launch context based Group of two.
     ///
     /// - Parameters:
@@ -238,13 +238,13 @@ import UIKit
             }
         }
     }
-    
+
     func launchContactList(from viewController: UIViewController) {
         let newChatVC = ALKNewChatViewController(configuration: ALChatManager.defaultConfiguration, viewModel: ALKNewChatViewModel(localizedStringFileName: ALChatManager.defaultConfiguration.localizedStringFileName))
         let navVC = UINavigationController(rootViewController: newChatVC)
         viewController.present(navVC, animated: true, completion: nil)
     }
-    
+
     func setApplicationBaseUrl() {
         guard let dict = Bundle.main.infoDictionary?["APPLOZIC_PRODUCTION"] as? [AnyHashable: Any] else {
             return
@@ -253,20 +253,20 @@ import UIKit
         if let baseUrl = dict["AL_KBASE_URL"] as? String {
             ALUserDefaultsHandler.setBASEURL(baseUrl)
         }
-        
+
         if let mqttUrl = dict["AL_MQTT_URL"] as? String {
             ALUserDefaultsHandler.setMQTTURL(mqttUrl)
         }
-        
+
         if let fileUrl = dict["AL_FILE_URL"] as? String {
             ALUserDefaultsHandler.setFILEURL(fileUrl)
         }
-        
+
         if let mqttPort = dict["AL_MQTT_PORT"] as? String {
             ALUserDefaultsHandler.setMQTTPort(mqttPort)
         }
     }
-    
+
     /// A convenient method to get logged-in user's information.
     ///
     /// If user information is stored in DB or preference, Code to get user's information should go here.
@@ -282,7 +282,7 @@ import UIKit
         user.displayName = ALUserDefaultsHandler.getDisplayName()
         return user
     }
-    
+
     private func conversationProxyFrom(original: ALConversationProxy, generated: ALConversationProxy) -> ALConversationProxy {
         let finalProxy = ALConversationProxy()
         finalProxy.userId = generated.userId
@@ -291,7 +291,7 @@ import UIKit
         finalProxy.groupId = original.groupId
         return finalProxy
     }
-    
+
     private func chatTitleUsing(userId: String?, groupId: NSNumber?) -> String {
         if let contactId = userId,
            let contact = ALContactDBService().loadContact(byKey: "userId", value: contactId),
@@ -306,13 +306,13 @@ import UIKit
         }
         return "No name"
     }
-    
+
     /// This method is used for updating APN's device token to applozic server.
     /// - Parameters:
     ///   - application: Pass the UIApplication object.
     ///   - deviceToken: Pass the device token data.
     @objc func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        
+
         print("Device token data :: \(String(describing: deviceToken.description))")
         var deviceTokenString: String = ""
         for i in 0..<deviceToken.count {
@@ -330,35 +330,42 @@ import UIKit
             })
         }
     }
-    
+
     /// Use this method in AppDelegate didFinishLaunchingWithOptions for register totification and data connection handlers.
     /// - Parameters:
     ///   - application: Pass UIApplication object.
     ///   - launchOptions: Pass the Launch Options Key.
     /// - Returns: True for the didFinishLaunchingWithOptions setup.
-    @objc func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    @objc func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        // Register for push notification.
         registerForNotification()
-        // Override point for customization after application launch.
+
+        /// Use this for Customizing notification.
+        /// - NOTE:
+        ///       Before using, comment ALKPushNotification line and remove
+        ///       ALApplozicSetting.setListOfViewController from ALChatManager.
+        ///       If you want to try this in our sample, then comment lines in ViewController's launchChatList method.
+        ///       Finally, Uncomment below line
+        /// PushNotificationHandler.shared.handleNotification(with: AppDelegate.config)
         ALKPushNotificationHandler.shared.dataConnectionNotificationHandlerWith(ALChatManager.defaultConfiguration)
-        let alApplocalNotificationHnadler : ALAppLocalNotifications =  ALAppLocalNotifications.appLocalNotificationHandler();
-        alApplocalNotificationHnadler.dataConnectionNotificationHandler();
-        return true
+        let alApplocalNotificationHnadler = ALAppLocalNotifications.appLocalNotificationHandler()
+        alApplocalNotificationHnadler?.dataConnectionNotificationHandler()
     }
-    
-    
+
+
     /// Use this method in AppDelegate applicationWillEnterForeground to reset the unread badge count in App.
     /// - Parameter application: Pass the UIApplication object.
     @objc func applicationWillEnterForeground(_ application: UIApplication) {
         UIApplication.shared.applicationIconBadgeNumber = 0
     }
-    
-    
+
+
     /// Use this method in AppDelegate applicationWillTerminate to save the context of the database.
     /// - Parameter application: Pass the UIApplication object.
     @objc func applicationWillTerminate(application: UIApplication) {
         ALDBHandler.sharedInstance().saveContext()
     }
-    
+
     /// Use this method for proccessing the notificiation of background.
     /// - Parameters:
     ///   - application: Pass UIApplication object.
@@ -374,7 +381,7 @@ import UIKit
         }
         completionHandler(UIBackgroundFetchResult.newData)
     }
-    
+
     /// Use this method for proccessing local notification data of UNUserNotificationCenter.
     /// - Parameters:
     ///   - center: Pass UNUserNotificationCenter object.
@@ -389,7 +396,7 @@ import UIKit
         }
         completionHandler([.sound, .badge, .alert])
     }
-    
+
     /// Use this method for proccessing User Notification Center response in didReceive method of UNUserNotificationCenter.
     /// - Parameters:
     ///   - center: Pass UNUserNotificationCenter object.
@@ -414,11 +421,11 @@ import UIKit
         }
         completionHandler()
     }
-    
+
     /// Use this method for register notification.
     @objc func registerForNotification() {
         UNUserNotificationCenter.current().requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in
-            
+
             if granted {
                 DispatchQueue.main.async {
                     UIApplication.shared.registerForRemoteNotifications()
@@ -426,7 +433,7 @@ import UIKit
             }
         }
     }
-    
+
     /// Setup your configuration here
     static let defaultConfiguration: ALKConfiguration = {
         var config = ALKConfiguration()
@@ -434,7 +441,7 @@ import UIKit
         // config.isTapOnNavigationBarEnabled = false
         return config
     }()
-    
+
     private func launch(viewController: UIViewController, from vc: UIViewController) {
         let navVC = ALKBaseNavigationViewController(rootViewController: viewController)
         navVC.modalPresentationStyle = .fullScreen
